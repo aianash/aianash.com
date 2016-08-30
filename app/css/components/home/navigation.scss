@@ -1,0 +1,134 @@
+.aian-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding: 40px 0;
+  z-index: 1001;
+  @media screen and (max-width: $screen-sm) {
+    padding: 20px 0;
+  }
+  #aian-logo {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  a {
+    padding: 5px 10px;
+    color: $brand-white;
+  }
+  .menu-1 {
+    @media screen and (max-width: $screen-sm ) {
+      display: none;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 2px 0 0 0;
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: inline;
+      a {
+        font-size: 14px;
+        padding: 30px 10px;
+        text-transform: uppercase;
+        color: rgba(255,255,255,.5);
+        @include transition(.5s);
+        &:hover,&:focus, &:active {
+          color: rgba(255,255,255,1);
+        }
+      }
+      &.has-dropdown {
+        position: relative;
+        .dropdown {
+          width: 130px;
+          -webkit-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
+          -moz-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
+          box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
+          z-index: 1002;
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          top: 40px;
+          left: 0;
+          text-align: left;
+          background: $brand-white;
+          padding: 20px;
+          @include border-radius(4px);
+          @include transition(.0s);
+          &:before {
+            bottom: 100%;
+            // left: 30%;
+            left: 40px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-bottom-color: #fff;
+            border-width: 8px;
+            margin-left: -8px;
+          }
+
+          li {
+            display: block;
+            margin-bottom: 7px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            a {
+              padding: 2px 0;
+              display: block;
+              color: lighten($brand-black, 60%);
+              line-height: 1.2;
+              text-transform: none;
+              font-size: 15px;
+              &:hover {
+                color: $brand-black;
+              }
+            }
+          }
+        }
+        &:hover, &:focus {
+          a {
+            color: $brand-white;
+          }
+          .dropdown {
+            // visibility: visible;
+            // opacity: 1;
+          }
+        }
+      }
+      &.btn-cta {
+        a {
+          color: $brand-primary;
+          span {
+            background: $brand-white;
+            padding: 4px 20px;
+            @include inline-block;
+            @include transition(.3s);
+            @include border-radius(100px);
+          }
+          &:hover {
+            span {
+              -webkit-box-shadow: 0px 14px 20px -9px rgba(0,0,0,0.75);
+              -moz-box-shadow: 0px 14px 20px -9px rgba(0,0,0,0.75);
+              box-shadow: 0px 14px 20px -9px rgba(0,0,0,0.75);
+            }
+          }
+        }
+      }
+      &.active {
+        > a {
+          color: $brand-white!important;
+        }
+      }
+    }
+  }
+}

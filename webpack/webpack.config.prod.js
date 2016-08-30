@@ -53,7 +53,10 @@ module.exports = [
     context: path.join(__dirname, '..', 'app'),
     devtool: 'source-map',
     entry: {
-      app: './client'
+      app: [
+        'bootstrap-sass!./theme/bootstrap.config.prod.js',
+        './client'
+      ]
     },
     output: {
       path: assetsPath,

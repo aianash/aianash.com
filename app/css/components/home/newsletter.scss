@@ -1,0 +1,101 @@
+#aian-started {
+  padding: 7em 0;
+  clear: both;
+  @media screen and (max-width: $screen-sm) {
+    padding: 3em 0;
+  }
+
+  background: rgba(255,97,179,1);
+  background: -moz-linear-gradient(-45deg, rgba(255,97,179,1) 0%, rgba(0,90,143,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,97,179,1)), color-stop(100%, rgba(0,90,143,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(255,97,179,1) 0%, rgba(0,90,143,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(255,97,179,1) 0%, rgba(0,90,143,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(255,97,179,1) 0%, rgba(0,90,143,1) 100%);
+  background: linear-gradient(135deg, rgba(255,97,179,1) 0%, rgba(0,90,143,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff61b3', endColorstr='#005a8f', GradientType=1 );
+
+  .aian-heading {
+    h2 {
+      color: $brand-white;
+      margin-bottom: 20px !important;
+    }
+    p{
+      color: rgba($brand-white,.5);
+    }
+  }
+
+  .form-control {
+    background: rgba(255,255,255,.2);
+    border: none!important;
+    color: $brand-white;
+    font-size: 16px!important;
+    width: 100%;
+
+
+    &::-webkit-input-placeholder {
+       color: $brand-white;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: $brand-white;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: $brand-white;
+    }
+
+    &:-ms-input-placeholder {
+       color: $brand-white;
+    }
+    @include transition(.5s);
+    &:focus {
+      background: rgba(255,255,255,.3);
+    }
+
+  }
+  .btn {
+    height: 54px;
+    border: none!important;
+    background: $brand-primary;
+    color: $brand-white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .form-inline {
+    .form-group {
+      width: 100%!important;
+      margin-bottom: 10px;
+      .form-control {
+        width: 100%;
+      }
+    }
+  }
+  .aian-heading {
+    margin-bottom: 30px;
+    h2 {
+      margin-bottom: 0;
+      font-size: 36px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      font-weight: bold;
+      color: $brand-white;
+    }
+  }
+}
+
+.form-control {
+  box-shadow: none;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  height: 54px;
+  font-size: 18px;
+  font-weight: 300;
+    &:active, &:focus {
+      outline: none;
+    box-shadow: none;
+    border-color: $brand-primary;
+  }
+}

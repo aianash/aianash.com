@@ -1,0 +1,70 @@
+#aian-footer {
+  padding: 7em 0;
+  clear: both;
+  background: #efefef;
+
+  @media screen and (max-width: $screen-sm) {
+    padding: 3em 0;
+  }
+  @media screen and (max-width: $screen-sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .aian-footer-links {
+    padding: 0;
+    margin: 0;  
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      a {
+        color: $brand-black;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .aian-widget {
+    text-align: right;
+    margin-bottom: 30px;
+    @media screen and (max-width: $screen-sm){
+      text-align: left;
+    }
+    h3 {
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+
+  .copyright {
+    .block {
+      display: block;
+    }
+  }
+}
+
+.aian-social-icons {
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include inline-block;
+    a {
+      @include inline-block;
+      color: $brand-primary;
+      padding-left: 10px;
+      padding-right: 10px;
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}

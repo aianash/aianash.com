@@ -1,6 +1,6 @@
-var path = require('path');
-var webpack = require('webpack');
-var assetsPath = path.join(__dirname, '..', 'public', 'assets');
+const path = require('path');
+const webpack = require('webpack');
+const assetsPath = path.join(__dirname, '..', 'public', 'assets');
 
 var commonLoaders = [
   {
@@ -28,15 +28,17 @@ var commonLoaders = [
         limit: 10000,
     }
   },
-  { test: /\.html$/, loader: 'html-loader' }
+  { test: /\.html$/, loader: 'html-loader' },
+  { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
+  { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
+  { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
 ];
 
 module.exports = {
     // The configuration for the server-side rendering
     name: 'server-side rendering',
     context: path.join(__dirname, '..', 'app'),
-    devtool: 'inline-source-map',
-    cache: true,
+    // devtool: 'inline-source-map',
     entry: {
       server: './server'
     },
@@ -52,22 +54,31 @@ module.exports = {
     },
     module: {
       loaders: commonLoaders.concat([
-        {
-          test: /\.css$/,
-          loader: 'css/locals?module&localIdentName=[name]__[local]___[hash:base64:5]'
+        { test: /\.css$/,
+          loaders: [
+            // 'css/locals?module&localIdentName=[name]__[local]___[hash:base64:5]'
+            'css/locals?module&localIdentName=[local]'
+          ]
+        },
+        { test: /\.scss$/,
+          loaders: [
+            // 'css/locals?module&localIdentName=[name]__[local]___[hash:base64:5]',
+            'css/locals?module&localIdentName=[local]',
+            'sass'
+          ]
         }
       ])
     },
     resolve: {
       root: [path.join(__dirname, '..', 'app')],
-      extensions: ['', '.js', '.jsx', '.css'],
+      extensions: ['', '.js', '.jsx', '.css', '.scss']
     },
     plugins: [
-        new webpack.DefinePlugin({
-          __DEVCLIENT__: false,
-          __DEVSERVER__: true,
-          __DEVELOPMENT__: true
-        }),
-        new webpack.IgnorePlugin(/vertx/)
+      new webpack.DefinePlugin({
+        __DEVCLIENT__: false,
+        __DEVSERVER__: true,
+        __DEVELOPMENT__: true
+      }),
+      new webpack.IgnorePlugin(/vertx/)
     ]
 };

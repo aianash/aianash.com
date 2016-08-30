@@ -1,0 +1,1 @@
+export dashboard1 from 'images/dashboard_1.png'

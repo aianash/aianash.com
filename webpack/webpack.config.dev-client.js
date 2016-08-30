@@ -1,8 +1,9 @@
-var path = require('path');
-var webpack = require('webpack');
-var styleLintPlugin = require('stylelint-webpack-plugin');
-var assetsPath = path.join(__dirname, '..', 'public', 'assets');
-var hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
+const path = require('path');
+const webpack = require('webpack');
+const styleLintPlugin = require('stylelint-webpack-plugin');
+const assetsPath = path.join(__dirname, '..', 'public', 'assets');
+const hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var commonLoaders = [
   {
@@ -29,7 +30,10 @@ var commonLoaders = [
         limit: 10000,
     }
   },
-  { test: /\.html$/, loader: 'html-loader' }
+  { test: /\.html$/, loader: 'html-loader' },
+  { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
+  { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
+  { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
 ];
 
 var postCSSConfig = function () {
@@ -38,6 +42,7 @@ var postCSSConfig = function () {
       path: path.join(__dirname, '..', 'app', 'css'),
       addDependencyTo: webpack // for hot-reloading
     }),
+    // require('postcss-scss')(),
     require('postcss-cssnext')({
       browsers: ['> 1%', 'last 2 versions']
     }),
@@ -47,7 +52,7 @@ var postCSSConfig = function () {
 
 module.exports = {
     // eval - Each module is executed with eval and //@ sourceURL.
-    devtool: 'inline-source-map',
+    devtool: 'eval',
     // The configuration for the client
     name: 'browser',
     cache: true,
@@ -74,7 +79,11 @@ module.exports = {
     // Multiple entry with hot loader
     // https://github.com/glenjamin/webpack-hot-middleware/blob/master/example/webpack.config.multientry.js
     entry: {
-      app: ['./client', hotMiddlewareScript]
+      app: [
+        hotMiddlewareScript,
+        './client'
+      ],
+      vendor: ['skrollr']
     },
     output: {
       // The output directory as absolute path
@@ -87,15 +96,38 @@ module.exports = {
     module: {
       loaders: commonLoaders.concat([
         { test: /\.css$/,
-          loader: 'style!css?module&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+          loaders: [
+            'style',
+            // 'css?module&localIdentName=[name]__[local]___[hash:base64:5]',
+            'css?module&localIdentName=[local]',
+            'postcss'
+          ]
+        },
+        { test: /\.scss$/,
+          loaders: [
+            'style',
+            // 'css?modules&importLoaders=2&localIdentName=[name]__[local]___[hash:base64:5]',
+            'css?modules&importLoaders=2&localIdentName=[local]',
+            'postcss',
+            'sass'
+          ]
         }
       ])
     },
     resolve: {
       root: [path.join(__dirname, '..', 'app')],
-      extensions: ['', '.js', '.jsx', '.css'],
+      extensions: ['', '.js', '.jsx', '.css', '.scss'],
+      alias: {
+        skrollr: "lib/skrollr.min.js"
+      }
     },
+    // externals: {
+    //   skrollr: 'skrollr'
+    // },
     plugins: [
+        new webpack.ProvidePlugin({
+          skrollr : "skrollr"
+        }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
@@ -107,7 +139,8 @@ module.exports = {
           configFile: path.join(__dirname, '..', '.stylelintrc'),
           context: path.join(__dirname, '..', 'app'),
           files: '**/*.?(sa|sc|c)ss'
-        })
+        }),
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity)
     ],
     postcss: postCSSConfig
 };

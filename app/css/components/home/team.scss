@@ -1,0 +1,53 @@
+#aian-team {
+  clear: both;
+  padding: 7em 0;
+  background: #E8ECF1;
+  @media screen and (max-width: $screen-sm) {
+    padding: 3em 0;
+  }
+
+  .person {
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    @include transition(.5s);
+    @include border-radius(5px);
+    background: $brand-white;
+
+    img {
+      width: 190px;
+      margin: 0 auto 30px auto;
+      @include border-radius(50%);
+    }
+    h3 {
+      margin-bottom: 0;
+    }
+    h4 {
+      color: lighten($brand-black, 60%);
+      font-size: 16px;
+    }
+    .social {
+      padding: 0;
+      margin: 0;
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        @include inline-block;
+        a {
+          padding: 10px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &:focus, &:hover {
+      background: $brand-white;
+      -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+      -moz-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+      -ms-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+    }
+  }
+}
