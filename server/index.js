@@ -40,7 +40,7 @@ app.use(methodOverride());
 
 app.use(Express.static(path.join(__dirname, '..', 'static')));
 
-app.use('*', AppServer.default);
+app.get('*', AppServer.default);
 
 if(app.get('port')) {
   server.listen(app.get('port'), (err) => {

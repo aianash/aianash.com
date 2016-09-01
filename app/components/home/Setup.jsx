@@ -111,7 +111,7 @@ export default class Setup extends Component {
   }
 
   showStep(event) {
-    this.setState({ step: event.currentTarget.dataset.step });
+    this.setState({ step: parseInt(event.currentTarget.dataset.step) });
   }
 
   render() {
