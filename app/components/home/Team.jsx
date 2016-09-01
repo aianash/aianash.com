@@ -12,9 +12,8 @@ const Team = () => {
   return(
     <div id="aian-team" data-section="team">
       <div className={cx("container")}>
-        <div className={cx("col-md-6", "col-md-offset-3", "text-center", "aian-heading")}>
-          <h2>Meet The Team</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident.</p>
+        <div className={cx("col-md-6", "col-md-offset-3", "text-center", "hd-row")}>
+          <a href="#features" className={cx("box-heading")}>Meet the team</a>
         </div>
         <div className={cx("col-md-4")}>
           <div className={cx("person")}>
@@ -25,8 +24,8 @@ const Team = () => {
             <ul className={cx("social")}>
               <li><a href="#"><i className={cx("icon-facebook")}></i></a></li>
               <li><a href="#"><i className={cx("icon-twitter")}></i></a></li>
-              <li><a href="#"><i className={cx("icon-dribbble")}></i></a></li>
-              <li><a href="#"><i className={cx("icon-instagram")}></i></a></li>
+              <li><a href="#"><i className={cx("icon-google")}></i></a></li>
+              <li><a href="#"><i className={cx("icon-linkedin")}></i></a></li>
             </ul>
           </div>
         </div>
@@ -39,8 +38,8 @@ const Team = () => {
             <ul className={cx("social")}>
               <li><a href="#"><i className={cx("icon-facebook")}></i></a></li>
               <li><a href="#"><i className={cx("icon-twitter")}></i></a></li>
-              <li><a href="#"><i className={cx("icon-dribbble")}></i></a></li>
-              <li><a href="#"><i className={cx("icon-instagram")}></i></a></li>
+              <li><a href="#"><i className={cx("icon-google")}></i></a></li>
+              <li><a href="#"><i className={cx("icon-linkedin")}></i></a></li>
             </ul>
           </div>
         </div>
@@ -53,8 +52,8 @@ const Team = () => {
             <ul className={cx("social")}>
               <li><a href="#"><i className={cx("icon-facebook")}></i></a></li>
               <li><a href="#"><i className={cx("icon-twitter")}></i></a></li>
-              <li><a href="#"><i className={cx("icon-dribbble")}></i></a></li>
-              <li><a href="#"><i className={cx("icon-instagram")}></i></a></li>
+              <li><a href="#"><i className={cx("icon-google")}></i></a></li>
+              <li><a href="#"><i className={cx("icon-linkedin")}></i></a></li>
             </ul>
           </div>
         </div>

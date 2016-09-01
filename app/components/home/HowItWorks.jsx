@@ -10,9 +10,11 @@ const HowItWorks = () => {
   return  (
     <div id='aian-hiw' className={cx('aian-hiw')} {...skrMainCfg}>
       <div className={cx('container')}>
-        <div className={cx('row')}>
-          <h2>Hello</h2>
-        </div>
+          <div className={cx("row", "hd-row")}>
+            <div className={cx("col-md-12", "text-center")}>
+              <a href="#" className={cx("box-heading", "light")}>How It Works</a>
+            </div>
+          </div>
       </div>
     </div>
   )

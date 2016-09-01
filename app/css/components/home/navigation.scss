@@ -9,13 +9,19 @@
   @media screen and (max-width: $screen-sm) {
     padding: 20px 0;
   }
-  #aian-logo {
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    font-weight: bold;
+
+  .aian-logo {
+    display: block;
+    margin-top: -24px;
   }
+
+  // #aian-logo {
+  //   font-size: 20px;
+  //   margin: 0;
+  //   padding: 0;
+  //   text-transform: uppercase;
+  //   font-weight: bold;
+  // }
   a {
     padding: 5px 10px;
     color: $brand-white;
