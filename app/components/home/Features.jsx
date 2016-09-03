@@ -2,17 +2,17 @@ import React from 'react';
 import Waypoint from 'react-waypoint';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
-import dashboard1 from 'images/dashboard_1.png'
 import skrolConfig from 'skrollrconfig';
 import Logo from 'components/Logo';
 
+import {dbehavior, dpredict, dabtest} from 'images';
 
 const cx = classNames.bind(styles);
 
 const FeatureOne = () => (
   <div className={cx("feature")}>
     <div className={cx("col-md-8", "col-md-pull-1", "animate-box")} >
-      <img className={cx("img-responsive")} src={dashboard1} alt="work"/>
+      <img className={cx("img-responsive")} src={dbehavior} alt="work"/>
     </div>
     <div className={cx("col-md-4", "animate-box")}>
       <div className={cx("desc")}>
@@ -26,7 +26,7 @@ const FeatureOne = () => (
 const FeatureTwo = () => (
   <div className={cx("feature")}>
     <div className={cx("col-md-8", "col-md-pull-1", "animate-box")}>
-      <img className={cx("img-responsive")} src={dashboard1} alt="work"/>
+      <img className={cx("img-responsive")} src={dpredict} alt="work"/>
     </div>
     <div className={cx("col-md-4", "animate-box")}>
       <div className={cx("desc")}>
@@ -40,7 +40,7 @@ const FeatureTwo = () => (
 const FeatureThree = () => (
   <div className={cx("feature")}>
     <div className={cx("col-md-8", "col-md-pull-1", "animate-box")}>
-      <img className={cx("img-responsive")} src={dashboard1} alt="work"/>
+      <img className={cx("img-responsive")} src={dabtest} alt="work"/>
     </div>
     <div className={cx("col-md-4", "animate-box")}>
       <div className={cx("desc")}>

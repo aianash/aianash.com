@@ -1,15 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
-import {
-  Sidebar,
-  Dash
-} from 'components/dashboard';
+import Logo from 'components/Logo';
+import { Header, Behavior } from 'components/dashboard';
 
 const cx = classNames.bind(styles);
 
 //
-export default class Dashboard extends Component {
+export default class Dash extends Component {
   constructor(props) {
     super(props);
   }
@@ -20,11 +18,8 @@ export default class Dashboard extends Component {
 
   render() {
     return (
-      <div className={cx("dashboard")}>
-        <div className={cx("main")}>
-          <Sidebar/>
-          <Dash children={this.props.children}/>
-        </div>
+      <div className={cx("dash")}>
+        {this.props.children}
       </div>
     )
   }

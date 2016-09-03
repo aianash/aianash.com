@@ -9,6 +9,12 @@ import {
   NotFound,
 } from 'containers';
 
+import {
+  Behavior,
+  Predict,
+  ABTest
+} from 'components/dashboard';
+
 export default (store) => {
   const requireLogin = (nextState, replace, callback) => {
     const { user: { authenticated }} = store.getState();
@@ -34,7 +40,11 @@ export default (store) => {
     <Route path="/" component={App}>
       { /* Home (main) route */ }
       <IndexRoute component={Home}/>
-      <Route path="dashboard" component={Dashboard}/>
+      <Route path="dashboard" component={Dashboard}>
+        <Route path="behavior" component={Behavior}/>
+        <Route path="predict" component={Predict}/>
+        <Route path="abtest" component={ABTest}/>
+      </Route>
       <Route path="login" component={LoginOrRegister}/>
     </Route>
   );

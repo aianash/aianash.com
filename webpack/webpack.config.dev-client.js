@@ -83,7 +83,7 @@ module.exports = {
         hotMiddlewareScript,
         './client'
       ],
-      vendor: ['skrollr']
+      vendor: ['skrollr', 'd3']
     },
     output: {
       // The output directory as absolute path
@@ -118,7 +118,8 @@ module.exports = {
       root: [path.join(__dirname, '..', 'app')],
       extensions: ['', '.js', '.jsx', '.css', '.scss'],
       alias: {
-        skrollr: "lib/skrollr.min.js"
+        skrollr: "lib/skrollr.min.js",
+        d3: "lib/d3.v4.min.js"
       }
     },
     // externals: {
@@ -126,7 +127,8 @@ module.exports = {
     // },
     plugins: [
         new webpack.ProvidePlugin({
-          skrollr : "skrollr"
+          skrollr : "skrollr",
+          d3 : "d3"
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
