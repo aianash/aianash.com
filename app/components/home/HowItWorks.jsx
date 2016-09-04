@@ -1,18 +1,22 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
-import skrolConfig from 'skrollrconfig';
+import {hiw} from 'images';
 
 const cx = classNames.bind(styles);
-const skrMainCfg = skrolConfig('aian-hiw');
 
 const HowItWorks = () => {
   return  (
-    <div id='aian-hiw' className={cx('aian-hiw')} {...skrMainCfg}>
+    <div id='aian-answers' className={cx('aian-answers')}>
       <div className={cx('container')}>
           <div className={cx("row", "hd-row")}>
             <div className={cx("col-md-12", "text-center")}>
-              <a href="#" className={cx("box-heading", "light")}>How It Works</a>
+              <a href="#" className={cx("box-heading", "light")}>how it works</a>
+            </div>
+          </div>
+          <div className={cx("row", "ques")}>
+            <div className={cx("col-md-6", "col-md-offset-3")}>
+              <img className={cx("img-responsive")} src={hiw}/>
             </div>
           </div>
       </div>
@@ -20,4 +24,4 @@ const HowItWorks = () => {
   )
 }
 
-export default HowItWorks
+export default HowItWorks;

@@ -1,4 +1,4 @@
-.aian-hiw {
+.aian-answers {
   position: relative;
   background-size: cover;
   background-position: top center;
@@ -14,7 +14,28 @@
   // background: -ms-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
   // background: linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005a8f', endColorstr='#ff61b3', GradientType=1 );
-  height: 900px;
+  // height: 900px;
   float: left;
   width: 100%;
+
+  .ques {
+    h2  {
+      color: $brand-white;
+      font-size: 20px;
+      text-transform: uppercase;
+      &:before {
+        position: absolute;
+        top: 24px;
+        content: "";
+        width: 20px;
+        margin-left: 0;
+        height: 2px;
+        background: #3498db;
+      }
+    }
+
+    li {
+
+    }
+  }
 }

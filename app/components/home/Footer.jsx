@@ -9,15 +9,11 @@ const Footer = () => {
     <footer id="aian-footer" role="contentinfo">
       <div className={cx("container")}>
         <div className={cx("row", "row-pb-md")}>
-          <div className={cx("col-md-4", "aian-widget")}>
-            <h3>The Company</h3>
-            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-            <p><a href="#">Learn More</a></p>
-          </div>
           <div className={cx("col-md-2", "col-sm-4", "col-xs-6", "col-md-push-1")}>
             <ul className={cx("aian-footer-links")}>
-              <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
+              <li><a href="#">Ph: +91 7799899984</a></li>
+              <li><a href="#">founders@aianash.com</a></li>
             </ul>
           </div>
           <div className={cx("row", "copyright")}>

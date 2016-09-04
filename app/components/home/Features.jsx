@@ -17,7 +17,7 @@ const FeatureOne = () => (
     <div className={cx("col-md-4", "animate-box")}>
       <div className={cx("desc")}>
         <h3><Logo/>behavior</h3>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+        <p><span> Analyze</span> informations acquired by users. <span>Understand</span> how information influenced actions. <span>Compare</span> different behavior clusters of users. <span>Visualize</span> navigation patterns for a user behavior. <span>Correlate</span> behavior with user segments.</p>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@ const FeatureTwo = () => (
     <div className={cx("col-md-4", "animate-box")}>
       <div className={cx("desc")}>
         <h3><Logo/>Predict</h3>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+        <p><span> Predict</span> behavior of user on customized webpage. <span>Compare</span> predictions for different user segments. <span>Visualize</span> prediction for different referral page.</p>
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@ const FeatureThree = () => (
     <div className={cx("col-md-4", "animate-box")}>
       <div className={cx("desc")}>
         <h3><Logo/>A/B Test</h3>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+        <p><span> A/B Test</span> user behavior with multiple design. <span>Analyze</span> predictions for different tests.</p>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
-import { dashboardOne } from 'images';
+import { tags, dbehavior, embed } from 'images';
 
 const cx = classNames.bind(styles);
 
@@ -11,7 +11,7 @@ const StepOne = ({step}) => (
     <div className={cx("row")}>
       <div className={cx("col-md-7", "col-sm-7", "col-md-pull-2", "col-sm-pull-2", "animate-box")}>
         <div className={cx("steps-image")}>
-          <img src={dashboardOne} alt="work"/>
+          <img src={embed} alt="work"/>
         </div>
       </div>
       <div className={cx("col-md-5", "col-sm-5")}>
@@ -48,7 +48,7 @@ const StepTwo = ({step}) => (
     <div className={cx("row")}>
       <div className={cx("col-md-7", "col-sm-7", "col-md-pull-2", "col-sm-pull-2", "animate-box")}>
         <div className={cx("steps-image")}>
-          <img src={dashboardOne} alt="work"/>
+          <img src={tags} alt="work"/>
         </div>
       </div>
       <div className={cx("col-md-5 col-sm-5")}>
@@ -76,7 +76,7 @@ const StepThree = ({step}) => (
     <div className={cx("row")}>
       <div className={cx("col-md-7", "col-sm-7", "col-md-pull-2", "col-sm-pull-2", "animate-box")}>
         <div className={cx("steps-image")}>
-          <img src={dashboardOne} alt="work"/>
+          <img src={dbehavior} alt="work"/>
         </div>
       </div>
       <div className={cx("col-md-5 col-sm-5")}>

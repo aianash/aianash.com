@@ -1,5 +1,4 @@
-export dashboardOne from 'images/dashboard_1.png'
-export ishan from 'images/ishan.jpg';
+export ishan from 'images/ishan.png';
 export neeraj from 'images/neeraj.jpg';
 export gaurav from 'images/gaurav.jpg';
 export slideOne from 'images/slide_bg_1.jpg';
@@ -13,3 +12,7 @@ export behavior from 'images/behavior.png';
 export dbehavior from 'images/behavior.jpg';
 export dpredict from 'images/predict.jpg';
 export dabtest from 'images/abtest.jpg';
+export logo from 'images/logo.png';
+export embed from 'images/embed.jpg';
+export tags from 'images/tags.jpg';
+export hiw from 'images/hiw.png';

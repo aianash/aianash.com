@@ -22,8 +22,7 @@ const config = {
     // { rel: 'icon', sizes: '192x192', href: chromecon },
     // Add to homescreen for Safari on IOS
     // { rel: 'apple-touch-icon', sizes: '152x152', applecon },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro|Roboto|Open+Sans|Yellowtail', type: 'text/css' },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Titillium+Web', type: 'text/css' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro', type: 'text/css' },
     { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css', type: 'text/css' },
     { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css', type: 'text/css' }
     // SEO: If your mobile URL is different from the desktop URL,

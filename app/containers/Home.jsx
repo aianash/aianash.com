@@ -3,8 +3,10 @@ import {
   Navigation,
   Header,
   CustomerSegment,
+  Answers,
   HowItWorks,
   Features,
+  Upcoming,
   Setup,
   Newsletter,
   Team,
@@ -12,7 +14,7 @@ import {
 
 class Home extends Component {
   componentDidMount() {
-    skrollr.init();
+    // skrollr.init();
   }
 
   static need = []
@@ -23,8 +25,10 @@ class Home extends Component {
         <Navigation/>
         <Header/>
         <CustomerSegment/>
+        <Answers/>
         <HowItWorks/>
         <Features/>
+        <Upcoming/>
         <Setup/>
         <Newsletter/>
         <Team/>

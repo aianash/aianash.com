@@ -22,7 +22,7 @@ class Header extends Component {
       slidesToScroll: 1,
       autoplay: true,
       fade: true,
-      autoplaySpeed: 10000
+      autoplaySpeed: 10000,
       // pauseOnHover: true
     };
 
@@ -38,15 +38,15 @@ class Header extends Component {
       'backgroundImage' : 'url(' + slide3bg + ')'
     }
 
+                  // <p><a href="#" className={cx("btn btn-primary btn-lg")}>Get started</a></p>
     return (
       <header id="aian-header" className={cx("aian-cover")}>
         <Slider {...settings} ref="slider">
           <div style={slide1style}>
             <div className={cx("container")}>
-              <div className={cx("col-md-10", "col-md-offset-1", "text-center", "js-fullheight", "slider-text")}>
+              <div className={cx("col-md-8", "js-fullheight", "slider-text")}>
                 <div className={cx("slider-text-inner")}>
-                  <h2>We tell a deeper story of users</h2>
-                  <p><a href="#" className={cx("btn btn-primary btn-lg")}>Get started</a></p>
+                  <h2><span>An Arificial Intelligence</span><br/> that understands how users acquire information <br/>on website.</h2>
                 </div>
               </div>
             </div>
@@ -54,10 +54,9 @@ class Header extends Component {
 
           <div style={slide2style}>
             <div className={cx("container")}>
-              <div className={cx("col-md-10", "col-md-offset-1", "text-center", "js-fullheight", "slider-text")}>
+              <div className={cx("col-md-8", "js-fullheight", "col-md-offset-4", "right", "slider-text")}>
                 <div className={cx("slider-text-inner")}>
-                  <h2>Understand how information affect your users</h2>
-                  <p><a href="#" className={cx("btn btn-primary btn-lg")}>Get started</a></p>
+                  <h2><span>Analyze how information</span><br/> affects user's actions.</h2>
                 </div>
               </div>
             </div>
@@ -65,10 +64,9 @@ class Header extends Component {
 
           <div style={slide3style}>
             <div className={cx("container")}>
-              <div className={cx("col-md-10", "col-md-offset-1", "text-center", "js-fullheight", "slider-text")}>
+              <div className={cx("col-md-8", "js-fullheight", "slider-text")}>
                 <div className={cx("slider-text-inner")}>
-                  <h2>We Think Different That Others Can't</h2>
-                  <p><a href="#" className={cx("btn btn-primary btn-lg")}>Get started</a></p>
+                  <h2><span>A Deeper Analytics</span><br/>that tells user's story.</h2>
                 </div>
               </div>
             </div>
@@ -80,17 +78,3 @@ class Header extends Component {
 }
 
 export default Header;
-      // <div className={cx("overlay")}></div>
-      // <div className={cx("container")}>
-      //   <div className={cx("row")}>
-      //     <div className={cx("col-md-10", "col-md-offset-1", "text-center")}>
-      //       <div className={cx("display-t")}>
-      //         <div className={cx("display-tc", "animate-box")} data-animate-effect="fadeIn">
-      //           <h1>We are Creative Studio</h1>
-      //           <h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-      //           <p><a href="#" className={cx("btn", "btn-default")}>View Our Work</a></p>
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </div>
-      // </div>

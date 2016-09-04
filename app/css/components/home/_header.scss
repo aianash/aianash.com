@@ -3,24 +3,37 @@
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
+
+  .right {
+    text-align: right;
+  }
 }
 
 .slick-track {
   height: 100%;
   .slider-text {
     display: table;
-    // opacity: 0;
     min-height: 700px;
     > .slider-text-inner {
       display: table-cell;
       vertical-align: middle;
       min-height: 700px;
       h2 {
-        font-size: 70px;
+        font-size: 30px;
         font-weight: 400;
         color: $brand-white;
         @media screen and (max-width: $screen-sm) {
-          font-size: 40px;
+          font-size: 20px;
+        }
+        span {
+          text-transform: uppercase;
+          font-size: 35px;
+          padding: 4px;
+          line-height: 1em;
+          background-color: $brand-primary;
+          color: white;
+          display: inline-block;
+          letter-spacing: 4px;
         }
       }
       .fh5co-lead {
