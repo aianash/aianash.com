@@ -38,7 +38,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
 
-app.use(Express.static(path.join(__dirname, '..', 'static')));
+app.use(Express.static(path.join(__dirname, '..', 'public')));
 
 app.get('*', AppServer.default);
 

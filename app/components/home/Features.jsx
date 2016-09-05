@@ -2,7 +2,6 @@ import React from 'react';
 import Waypoint from 'react-waypoint';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
-import skrolConfig from 'skrollrconfig';
 import Logo from 'components/Logo';
 
 import {dbehavior, dpredict, dabtest} from 'images';

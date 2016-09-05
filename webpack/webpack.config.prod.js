@@ -1,10 +1,14 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var InlineEnviromentVariablesPlugin = require('inline-environment-variables-webpack-plugin');
+var ImageminPlugin = require('imagemin-webpack-plugin').default;
+
 var webpack = require('webpack');
 
 var assetsPath = path.join(__dirname, '..', 'public', 'assets');
 var publicPath = '/assets/';
+
+const extractScss = new ExtractTextPlugin('styles/main.css');
 
 var commonLoaders = [
   {
@@ -24,15 +28,16 @@ var commonLoaders = [
   },
   { test: /\.json$/, loader: 'json-loader' },
   {
-    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
     loader: 'url',
     query: {
         name: '[hash].[ext]',
         limit: 10000,
     }
   },
-  { test: /\.css$/,
-    loader: ExtractTextPlugin.extract('style-loader', 'css-loader?module!postcss-loader')
+  {
+    test: /\.scss$/i,
+    loader: ExtractTextPlugin.extract('css-loader!postcss-loader!sass-loader')
   }
 ];
 
@@ -51,12 +56,9 @@ module.exports = [
     // The configuration for the client
     name: 'browser',
     context: path.join(__dirname, '..', 'app'),
-    devtool: 'source-map',
+    devtool: 'cheap-module-source-map',
     entry: {
-      app: [
-        'bootstrap-sass!./theme/bootstrap.config.prod.js',
-        './client'
-      ]
+      app: './client'
     },
     output: {
       path: assetsPath,
@@ -68,10 +70,11 @@ module.exports = [
     },
     resolve: {
       root: [path.join(__dirname, '..', 'app')],
-      extensions: ['', '.js', '.jsx', '.css']
+      extensions: ['', '.js', '.jsx', '.css', '.scss']
     },
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
+        // new webpack.optimize.OccurenceOrderPlugin(),
+        // extractScss,
         // extract inline css from modules into separate files
         new ExtractTextPlugin('styles/main.css', { allChunks: true }),
         new webpack.DefinePlugin({
@@ -96,7 +99,8 @@ module.exports = [
         new InlineEnviromentVariablesPlugin({ NODE_ENV: 'production' })
     ],
     postcss: postCSSConfig
-  }, {
+  },
+  {
     // The configuration for the server-side rendering
     name: 'server-side rendering',
     context: path.join(__dirname, '..', 'app'),
@@ -115,10 +119,11 @@ module.exports = [
     },
     resolve: {
       root: [path.join(__dirname, '..', 'app')],
-      extensions: ['', '.js', '.jsx', '.css']
+      extensions: ['', '.js', '.jsx', '.css', '.scss']
     },
     plugins: [
-      new webpack.optimize.OccurenceOrderPlugin(),
+      // new webpack.optimize.OccurenceOrderPlugin(),
+      // extractScss,
       new ExtractTextPlugin('styles/main.css', { allChunks: true }),
       new webpack.DefinePlugin({
           'process.env': {
@@ -133,15 +138,33 @@ module.exports = [
           __DEVCLIENT__: false,
           __DEVSERVER__: false
       }),
-      new webpack.IgnorePlugin(/\.\/dev/, /\/config$/),
       new webpack.IgnorePlugin(/vertx/),
 
       // optimizations
+      new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin({
         compressor: {
           warnings: false
         }
       }),
+      // Make sure that the plugin is after any plugins that add images
+      // These are the default options:
+      // new ImageminPlugin({
+      //   disable: false,
+      //   optipng: {
+      //     optimizationLevel: 3
+      //   },
+      //   gifsicle: {
+      //     optimizationLevel: 1
+      //   },
+      //   jpegtran: {
+      //     progressive: false
+      //   },
+      //   svgo: {
+      //   },
+      //   pngquant: null, // pngquant is not run unless you pass options here
+      //   plugins: []
+      // }),
       new InlineEnviromentVariablesPlugin({ NODE_ENV: 'production' })
     ],
     postcss: postCSSConfig

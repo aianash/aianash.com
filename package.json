@@ -118,6 +118,7 @@
     "eslint-plugin-react": "^6.1.2",
     "expect": "^1.15.2",
     "font-awesome-loader": "^1.0.0",
+    "imagemin-webpack-plugin": "^1.0.8",
     "karma": "^1.1.1",
     "karma-jsdom-launcher": "^4.0.0",
     "karma-mocha": "^1.0.1",
