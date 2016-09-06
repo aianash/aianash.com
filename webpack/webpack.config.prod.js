@@ -149,22 +149,22 @@ module.exports = [
       }),
       // Make sure that the plugin is after any plugins that add images
       // These are the default options:
-      // new ImageminPlugin({
-      //   disable: false,
-      //   optipng: {
-      //     optimizationLevel: 3
-      //   },
-      //   gifsicle: {
-      //     optimizationLevel: 1
-      //   },
-      //   jpegtran: {
-      //     progressive: false
-      //   },
-      //   svgo: {
-      //   },
-      //   pngquant: null, // pngquant is not run unless you pass options here
-      //   plugins: []
-      // }),
+      new ImageminPlugin({
+        disable: false,
+        optipng: {
+          optimizationLevel: 3
+        },
+        gifsicle: {
+          optimizationLevel: 1
+        },
+        jpegtran: {
+          progressive: false
+        },
+        svgo: {
+        },
+        pngquant: null, // pngquant is not run unless you pass options here
+        plugins: []
+      }),
       new InlineEnviromentVariablesPlugin({ NODE_ENV: 'production' })
     ],
     postcss: postCSSConfig
