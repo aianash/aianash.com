@@ -33,7 +33,7 @@ const Team = () => {
             <h4>Co-Founder</h4>
             <p>Tech enthusiast. AI researcher. Android addict. Movie buff. Love puzzles. Ex-Oraclite.</p>
             <ul className={cx("social")}>
-              <li><a href="https://about.me/gaurav-gupta">about.me/kumarishan</a></li>
+              <li><a href="https://about.me/gaurav-gupta">about.me/gaurav-gupta</a></li>
               <li><a href="https://in.linkedin.com/in/gauravguptaiitr"><i className={cx("icon-linkedin")}></i></a></li>
               <li><a href="https://twitter.com/ravmon1"><i className={cx("icon-twitter")}></i></a></li>
             </ul>
@@ -46,8 +46,9 @@ const Team = () => {
             <h4>Co-Founder</h4>
             <p>Software Developer. Finds CSS pretty tough and Akka awesome. Trying to make machines learn. Ex-Commonfloor.</p>
             <ul className={cx("social")}>
-              <li><a href="#"><i className={cx("icon-linkedin")}></i></a></li>
-              <li><a href="#"><i className={cx("icon-twitter")}></i></a></li>
+              <li><a href="https://about.me/neeraj.gangwar">about.me/neeraj.gangwar</a></li>
+              <li><a href="https://in.linkedin.com/in/gangwarneeraj"><i className={cx("icon-linkedin")}></i></a></li>
+              <li><a href="https://twitter.com/neeraj_gangwar"><i className={cx("icon-twitter")}></i></a></li>
             </ul>
           </div>
         </div>

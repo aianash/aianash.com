@@ -38,7 +38,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
 
-app.use(Express.static(path.join(__dirname, '..', 'public')));
+if(ENV === 'production') {
+  app.use(Express.static(path.join(__dirname, '..', 'public'), { maxAge: '30 days'}));
+} else {
+  app.use(Express.static(path.join(__dirname, '..', 'public')));
+}
 
 app.get('*', AppServer.default);
 
