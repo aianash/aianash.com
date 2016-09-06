@@ -1,0 +1,87 @@
+#aian-subscribe {
+  padding: 3em 0 7em 0;
+  clear: both;
+  background: #27292c;
+  @media screen and (max-width: $screen-sm) {
+    padding: 3em 0;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 20px !important;
+    font-size: 30px;
+    color: $brand-white;
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      width: 200px;
+      margin-left: -125px;
+      height: 2px;
+      left: 50%;
+      background: #3498db;
+    }
+  }
+
+  .email {
+    // background: $brand-white;
+    // border: none!important;
+    color: $brand-white;
+    font-size: 16px!important;
+    width: 100%;
+    padding: 0 10px;
+
+    box-shadow: none;
+    background: transparent;
+    border: 2px solid rgba($brand-primary, 0.4);
+    height: 54px;
+    font-size: 18px;
+    font-weight: 300;
+    width: 100%;
+
+    &:active, &:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: $brand-primary;
+    }
+
+    &::-webkit-input-placeholder {
+       color: rgba($brand-primary, 0.4);
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: rgba($brand-primary, 0.4);
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: rgba($brand-primary, 0.4);
+    }
+
+    &:-ms-input-placeholder {
+       color: rgba($brand-primary, 0.4);
+    }
+
+    @include transition(.5s);
+  }
+
+  .btn {
+    height: 54px;
+    border: none!important;
+    background: #3498db;
+    color: $brand-white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .form-inline {
+    margin-top: 4em;
+    .form-group {
+      width: 100%!important;
+      margin-bottom: 10px;
+    }
+  }
+}

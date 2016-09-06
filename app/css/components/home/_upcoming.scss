@@ -1,0 +1,21 @@
+.aian-upcoming {
+  padding: 3em 0;
+
+  .col-md-4 {
+    h2  {
+      color: $brand-white;
+      font-size: 20px;
+      text-transform: uppercase;
+
+      &:before {
+        position: absolute;
+        top: 24px;
+        content: "";
+        width: 80px;
+        margin-left: 0;
+        height: 2px;
+        background: #3498db;
+      }
+    }
+  }
+}

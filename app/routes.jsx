@@ -4,10 +4,16 @@ import { IndexRoute, Route } from 'react-router';
 import {
   App,
   Home,
-  Dashboard,
-  LoginOrRegister,
-  NotFound,
+  // Dashboard,
+  // LoginOrRegister,
+  // NotFound,
 } from 'containers';
+
+// import {
+//   Behavior,
+//   Predict,
+//   ABTest
+// } from 'components/dashboard';
 
 export default (store) => {
   const requireLogin = (nextState, replace, callback) => {
@@ -18,7 +24,6 @@ export default (store) => {
         state: { nextPathname: nextState.location.pathname }
       });
     }
-    callback();
   };
 
   const redirectAuth = (nextState, replace, callback) => {
@@ -35,14 +40,12 @@ export default (store) => {
     <Route path="/" component={App}>
       { /* Home (main) route */ }
       <IndexRoute component={Home}/>
-
-      { /* Routes requiring login */ }
-      <Route onEnter={requireLogin}>
-        <Route path="dashboard" component={Dashboard}/>
+      {/* <Route path="dashboard" component={Dashboard}>
+        <Route path="behavior" component={Behavior}/>
+        <Route path="predict" component={Predict}/>
+        <Route path="abtest" component={ABTest}/>
       </Route>
-
-      { /* Routes */ }
-      <Route path="login" component={LoginOrRegister}/>
+      <Route path="login" component={LoginOrRegister}/> */}
     </Route>
   );
 };

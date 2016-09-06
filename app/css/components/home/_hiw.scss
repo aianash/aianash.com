@@ -1,0 +1,41 @@
+.aian-answers {
+  position: relative;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background: #27292c;
+  padding: 3em 0 7em 0;
+
+  // background: rgba(0,90,143,1);
+  // background: -moz-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(0,90,143,1)), color-stop(100%, rgba(255,97,179,1)));
+  // background: -webkit-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // background: -o-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // background: -ms-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // background: linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005a8f', endColorstr='#ff61b3', GradientType=1 );
+  // height: 900px;
+  float: left;
+  width: 100%;
+
+  .ques {
+    h2  {
+      color: $brand-white;
+      font-size: 20px;
+      text-transform: uppercase;
+      &:before {
+        position: absolute;
+        top: 24px;
+        content: "";
+        width: 20px;
+        margin-left: 0;
+        height: 2px;
+        background: #3498db;
+      }
+    }
+
+    li {
+
+    }
+  }
+}

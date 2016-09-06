@@ -1,11 +1,8 @@
 {
     "verbose": false,
     "watch": [
-      "app/server.jsx",
-      "app/routes.jsx",
-      "app/helmconfig.js",
-      "app/components/Meta.jsx",
       "server",
+      "app/components",
       "webpack/webpack.config.dev-client.js",
       "webpack/webpack.config.dev-server.js",
       ".stylelintrc"

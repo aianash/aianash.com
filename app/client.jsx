@@ -19,7 +19,7 @@ const destination = document.getElementById('app');
  * Callback function handling frontend route changes.
  */
 function onUpdate() {
-    // Prevent duplicate fetches when first loaded.
+  // Prevent duplicate fetches when first loaded.
   // Explanation: On server-side render, we already have __INITIAL_STATE__
   // So when the client side onUpdate kicks in, we do not need to fetch twice.
   // We set it to null so that every subsequent client-side navigation will
@@ -50,21 +50,17 @@ ReactDOM.render(
 
 if(process.env.NODE_ENV !== 'production') {
   window.React = React; // enable debugger
-
-  if(!destination || !destination.firstChild || !destination.firstChild.attributes || !destination.firstChild.attributes['data-react-checksum']) {
-    console.error('Server-side React render was discarded. Make sure that your initial render does not contain any client-side code.');
-  }
 }
 
-if (__DEVTOOLS__ && !window.devToolsExtension) {
-  const DevTools = require('./containers/DevTools');
-  ReactDOM.render(
-    <Provider store={store} key="provider">
-      <div>
-        {component}
-        <DevTools/>
-      </div>
-    </Provider>,
-    destination
-  );
-}
+// if (__DEVTOOLS__ && !window.devToolsExtension) {
+//   const DevTools = require('./containers/DevTools');
+//   ReactDOM.render(
+//     <Provider store={store} key="provider">
+//       <div>
+//         {component}
+//         <DevTools/>
+//       </div>
+//     </Provider>,
+//     destination
+//   );
+// }

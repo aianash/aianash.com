@@ -38,9 +38,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
 
-app.use(Express.static(path.join(__dirname, '..', 'static')));
+app.use(Express.static(path.join(__dirname, '..', 'public')));
 
-app.use('*', AppServer.default);
+app.get('*', AppServer.default);
 
 if(app.get('port')) {
   server.listen(app.get('port'), (err) => {

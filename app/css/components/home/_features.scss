@@ -1,0 +1,73 @@
+#aian-features {
+  padding: 3em 0;
+  clear: both;
+  position: relative;
+  background: #27292c;
+
+  // padding-top: 734px;
+  // background: -moz-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(0,90,143,1)), color-stop(100%, rgba(255,97,179,1)));
+  // background: -webkit-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // background: -o-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // background: -ms-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // background: linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005a8f', endColorstr='#ff61b3', GradientType=1 );
+
+  @media screen and (max-width: $screen-sm) {
+    padding: 3em 0;
+  }
+  @media screen and (max-width: $screen-sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.feature {
+  width: 100%;
+  float: left;
+  // margin-top: 3em;
+  margin-bottom: 5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .desc {
+    text-align: right;
+
+    h3 {
+      color: $brand-white;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding-bottom: 6px;
+      border-bottom: 2px solid $brand-primary;
+    }
+
+    p {
+      color: rgba($brand-white, .8);
+      line-height: 1.3em;
+      margin: 0;
+      span {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: white;
+        padding: 4px;
+        background-color: $brand-primary;
+        display: inline-block;
+        margin: 2px 0;
+        line-height: 1em;
+      }
+    }
+
+    .aian-logo {
+      margin-right: 10px;
+      display: inline-block;
+      height: 20px;
+      width: 88px;
+    }
+
+    > div {
+      margin-bottom: 40px;
+    }
+
+  }
+}
