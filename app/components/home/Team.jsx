@@ -17,7 +17,7 @@ const Team = () => {
           <div className={cx("person")}>
             <img src={ishan} alt="" className={cx("img-responsive")}/>
             <h3>Kumar Ishan</h3>
-            <h4>Co-Founder</h4>
+            <h4>Founder</h4>
             <p>Versatile Developer. Deep into Machine Learning. Life Long Learner. Bibliophile. Ex-Amazonian.</p>
             <ul className={cx("social")}>
               <li><a href="https://about.me/kumarishan">about.me/kumarishan</a></li>
@@ -31,10 +31,11 @@ const Team = () => {
             <img src={gaurav} alt="" className={cx("img-responsive")}/>
             <h3>Gaurav Gupta</h3>
             <h4>Co-Founder</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident.</p>
+            <p>Tech enthusiast. AI researcher. Android addict. Movie buff. Love puzzles. Ex-Oraclite.</p>
             <ul className={cx("social")}>
-              <li><a href="#"><i className={cx("icon-linkedin")}></i></a></li>
-              <li><a href="#"><i className={cx("icon-twitter")}></i></a></li>
+              <li><a href="https://about.me/gaurav-gupta">about.me/kumarishan</a></li>
+              <li><a href="https://in.linkedin.com/in/gauravguptaiitr"><i className={cx("icon-linkedin")}></i></a></li>
+              <li><a href="https://twitter.com/ravmon1"><i className={cx("icon-twitter")}></i></a></li>
             </ul>
           </div>
         </div>
@@ -43,7 +44,7 @@ const Team = () => {
             <img src={neeraj} alt="" className={cx("img-responsive")}/>
             <h3>Neeraj Gangwar</h3>
             <h4>Co-Founder</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident.</p>
+            <p>Software Developer. Finds CSS pretty tough and Akka awesome. Trying to make machines learn. Ex-Commonfloor.</p>
             <ul className={cx("social")}>
               <li><a href="#"><i className={cx("icon-linkedin")}></i></a></li>
               <li><a href="#"><i className={cx("icon-twitter")}></i></a></li>

@@ -2,6 +2,7 @@
   padding: 3em 0;
   clear: both;
   background: #efefef;
+  color: $brand-black;
 
   @media screen and (max-width: $screen-sm) {
     padding: 3em 0;
@@ -13,7 +14,7 @@
 
   .aian-footer-links {
     padding: 0;
-    margin: 0;  
+    margin: 0;
     li {
       padding: 0;
       margin: 0;
