@@ -3,9 +3,11 @@ import Waypoint from 'react-waypoint';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
 import Logo from 'components/Logo';
+import Scroll from 'react-scroll';
 
 import {dbehavior, dpredict, dabtest} from 'images';
 
+const Element = Scroll.Element;
 const cx = classNames.bind(styles);
 
 const FeatureOne = () => (
@@ -52,7 +54,7 @@ const FeatureThree = () => (
 
 const Features = () => {
   return (
-    <div id="aian-features" className={cx('aian-features')}>
+    <Element name="features" id="aian-features" className={cx('aian-features')}>
       <div className={cx("container")}>
         <div className={cx("row", "hd-row")}>
           <div className={cx("col-md-8", "col-md-offset-2", "text-center")}>
@@ -65,7 +67,7 @@ const Features = () => {
           <FeatureThree/>
         </div>
       </div>
-    </div>
+    </Element>
   )
 }
 

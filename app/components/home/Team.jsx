@@ -1,14 +1,16 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
+import Scroll from 'react-scroll';
 
 import { ishan, gaurav, neeraj } from 'images';
 
+const Element = Scroll.Element;
 const cx = classNames.bind(styles);
 
 const Team = () => {
   return(
-    <div id="aian-team" data-section="team">
+    <Element name="team" id="aian-team" data-section="team">
       <div className={cx("container")}>
         <div className={cx("col-md-6", "col-md-offset-3", "text-center", "hd-row")}>
           <a href="#team" className={cx("box-heading")}>Meet the team</a>
@@ -53,7 +55,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   )
 }
 

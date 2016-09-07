@@ -2,12 +2,14 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
 import {hiw} from 'images';
+import Scroll from 'react-scroll';
 
+const Element = Scroll.Element;
 const cx = classNames.bind(styles);
 
 const HowItWorks = () => {
   return  (
-    <div id='aian-answers' className={cx('aian-answers', "aianash")}>
+    <Element name="hiw" id='aian-answers' className={cx('aian-answers', "aianash")}>
       <div className={cx('container')}>
           <div className={cx("row", "hd-row")}>
             <div className={cx("col-md-12", "text-center")}>
@@ -20,7 +22,7 @@ const HowItWorks = () => {
             </div>
           </div>
       </div>
-    </div>
+    </Element>
   )
 }
 

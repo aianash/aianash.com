@@ -3,6 +3,10 @@ import classNames from 'classnames/bind';
 import css from 'css/main';
 import Logo from 'components/Logo';
 
+import Scroll from 'react-scroll';
+
+const Link = Scroll.Link;
+
 const cx = classNames.bind(css);
 
 const Navigation = () => {
@@ -15,11 +19,10 @@ const Navigation = () => {
           </div>
           <div className={cx("col-xs-10", "text-right", "menu-1")}>
             <ul>
-              <li className={cx("active")}><a href="index.html">Home</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#hiw">How It Works</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><Link activeClass={cx("active")} to="team" smooth={true} duration={500}>Team</Link></li>
+              <li><Link activeClass={cx("active")} to="features" smooth={true} duration={500}>Features</Link></li>
+              <li><Link activeClass={cx("active")} to="hiw" smooth={true} duration={500}>How It Works</Link></li>
+              <li><Link activeClass={cx("active")} to="subscribe" smooth={true} duration={500}>Get Started</Link></li>
             </ul>
           </div>
         </div>
