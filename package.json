@@ -23,8 +23,7 @@
     "build:node": "cross-env NODE_ENV=production npm run babel -- ./server -d ./compiled",
     "build": "npm run clean && npm run build:prod && npm run build:node",
     "test": "cross-env NODE_ENV=test karma start",
-    "test:watch": "cross-env NODE_ENV=test npm test -- --watch --no-single-run",
-    "postinstall": "npm run build"
+    "test:watch": "cross-env NODE_ENV=test npm test -- --watch --no-single-run"
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
