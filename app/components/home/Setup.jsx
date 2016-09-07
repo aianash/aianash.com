@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 //
 const StepOne = ({step}) => (
-  <div className={cx({'hidden': (step != 1)})}>
+  <div className={cx("aianash", {'hidden': (step != 1)})}>
     <div className={cx("row")}>
       <div className={cx("col-md-7", "col-sm-7", "col-md-pull-2", "col-sm-pull-2", "animate-box")}>
         <div className={cx("steps-image")}>
@@ -44,7 +44,7 @@ StepOne.propTypes = {
 
 //
 const StepTwo = ({step}) => (
-  <div className={cx({'hidden': (step != 2)})}>
+  <div className={cx("aianash", {'hidden': (step != 2)})}>
     <div className={cx("row")}>
       <div className={cx("col-md-7", "col-sm-7", "col-md-pull-2", "col-sm-pull-2", "animate-box")}>
         <div className={cx("steps-image")}>
@@ -72,7 +72,7 @@ StepTwo.propTypes = {
 
 //
 const StepThree = ({step}) => (
-  <div className={cx({'hidden': (step != 3)})}>
+  <div className={cx("aianash", {'hidden': (step != 3)})}>
     <div className={cx("row")}>
       <div className={cx("col-md-7", "col-sm-7", "col-md-pull-2", "col-sm-pull-2", "animate-box")}>
         <div className={cx("steps-image")}>

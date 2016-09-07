@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const Upcoming = () => {
   return (
-    <div id="upcomming" className={cx("aian-upcoming")}>
+    <div id="upcomming" className={cx("aian-upcoming", "aianash")}>
       <div className={cx("container")}>
         <div className={cx("row", "hd-row")}>
           <div className={cx("col-md-8", "col-md-offset-2", "text-center")}>

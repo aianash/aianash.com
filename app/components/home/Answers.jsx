@@ -15,7 +15,7 @@ const Answers = () => {
           </div>
 
           <div className={cx("row", "ques")}>
-            <div className={cx("col-md-5", "col-md-offset-2")}>
+            <div className={cx("col-md-5", "col-md-offset-2", "aianash")}>
               <h2>OUR's</h2>
               <ul className={cx("list-unstyled")}>
                 <li>Which features user like the most ?</li>
@@ -23,7 +23,7 @@ const Answers = () => {
                 <li>Why one user clicked <i>"buy"</i> but another didn't ?</li>
               </ul>
             </div>
-            <div className={cx("col-md-5")}>
+            <div className={cx("col-md-5", "aianash")}>
               <h2>Other's</h2>
               <ul className={cx("list-unstyled")}>
                 <li>How users interact using heat map ?</li>

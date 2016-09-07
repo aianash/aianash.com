@@ -9,7 +9,7 @@ import {dbehavior, dpredict, dabtest} from 'images';
 const cx = classNames.bind(styles);
 
 const FeatureOne = () => (
-  <div className={cx("feature")}>
+  <div className={cx("feature", "aianash")}>
     <div className={cx("col-md-8", "col-md-pull-1", "animate-box")} >
       <img className={cx("img-responsive")} src={dbehavior} alt="work"/>
     </div>
@@ -23,7 +23,7 @@ const FeatureOne = () => (
 )
 
 const FeatureTwo = () => (
-  <div className={cx("feature")}>
+  <div className={cx("feature", "aianash")}>
     <div className={cx("col-md-8", "col-md-pull-1", "animate-box")}>
       <img className={cx("img-responsive")} src={dpredict} alt="work"/>
     </div>
@@ -37,7 +37,7 @@ const FeatureTwo = () => (
 )
 
 const FeatureThree = () => (
-  <div className={cx("feature")}>
+  <div className={cx("feature", "aianash")}>
     <div className={cx("col-md-8", "col-md-pull-1", "animate-box")}>
       <img className={cx("img-responsive")} src={dabtest} alt="work"/>
     </div>

@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const HowItWorks = () => {
   return  (
-    <div id='aian-answers' className={cx('aian-answers')}>
+    <div id='aian-answers' className={cx('aian-answers', "aianash")}>
       <div className={cx('container')}>
           <div className={cx("row", "hd-row")}>
             <div className={cx("col-md-12", "text-center")}>
