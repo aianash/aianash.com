@@ -1,4 +1,4 @@
-export ishan from 'images/ishan.png';
+export ishan from 'images/ishan.jpg';
 export neeraj from 'images/neeraj.jpg';
 export gaurav from 'images/gaurav.jpg';
 
