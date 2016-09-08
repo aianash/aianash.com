@@ -10,9 +10,6 @@ export ecommerce from 'images/ecommerce.jpg';
 export services from 'images/services.jpg';
 export product from 'images/rsz_product.png';
 
-export pageseq from 'images/pageseq.png';
-export behavior from 'images/behavior.png';
-
 export dbehavior from 'images/rsz_behavior.jpg';
 export dpredict from 'images/rsz_predict.jpg';
 export dabtest from 'images/rsz_abtest.jpg';
