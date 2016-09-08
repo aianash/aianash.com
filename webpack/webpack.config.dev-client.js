@@ -142,7 +142,7 @@ module.exports = {
           context: path.join(__dirname, '..', 'app'),
           files: '**/*.?(sa|sc|c)ss'
         }),
-        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity)
+        // new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity)
     ],
     postcss: postCSSConfig
 };

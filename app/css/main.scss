@@ -3,17 +3,6 @@
 @import 'utils';
 @import 'button';
 
-// @font-face {
-//   font-family: 'icomoon';
-//   src:  url('./fonts/icomoon.eot?vngltp');
-//   src:  url('./fonts/icomoon.eot?vngltp#iefix') format('embedded-opentype'),
-//     url('./fonts/icomoon.ttf?vngltp') format('truetype'),
-//     url('./fonts/icomoon.woff?vngltp') format('woff'),
-//     url('./fonts/icomoon.svg?vngltp#icomoon') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
 @font-face {
   font-family: 'icomoon';
   src:  url('./fonts/icomoon.eot');
@@ -140,11 +129,3 @@ h1, h2, h3, h4, h5, h6, figure {
 @import 'components/home/newsletter';
 @import 'components/home/team';
 @import 'components/home/footer';
-
-// dashboard
-// @import 'components/dashboard/dash';
-// @import 'components/dashboard/sidebar';
-// @import 'components/dashboard/footer';
-// @import 'components/dashboard/graph';
-// @import 'components/dashboard/behavior';
-// @import 'components/dashboard/predict';

@@ -29,10 +29,10 @@ const CustomerSegment = () => {
         <div className={cx("portfolio-grid-item-color")}>
           <div className={cx("desc")}>
             <h2>Analytics that suits your need</h2>
-            <p><a href="#" className={cx("btn btn-primary btn-outline with-arrow")}>Learn More<i className={cx("icon-arrow-right22")}></i></a></p>
+            <p><a className={cx("btn btn-primary btn-outline with-arrow")}>Learn More<i className={cx("icon-arrow-right22")}></i></a></p>
           </div>
         </div>
-        <a href="#" className={cx("portfolio-grid-item")} style={ec}>
+        <a className={cx("portfolio-grid-item", "aianash")} style={ec}>
           <div className={cx("desc2")}>
             <h3>Ecommerce</h3>
             <p>Find what users are looking for in a product</p>
@@ -40,14 +40,14 @@ const CustomerSegment = () => {
             <i className={cx("icon-heart")}></i>
           </div>
         </a>
-        <a href="#" className={cx("portfolio-grid-item")} style={sr}>
+        <a className={cx("portfolio-grid-item", "aianash")} style={sr}>
           <div className={cx("desc2")}>
             <h3>Web Services</h3>
             <p>How users analyze your services</p>
             <i className={cx("icon-heart")}></i>
           </div>
         </a>
-        <a href="#" className={cx("portfolio-grid-item")} style={pd}>
+        <a className={cx("portfolio-grid-item", "aianash")} style={pd}>
           <div className={cx("desc2")}>
             <h3>Product</h3>
             <p>What features of your product users like</p>

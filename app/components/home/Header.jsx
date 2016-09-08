@@ -3,9 +3,10 @@ import Slider from 'react-slick';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
 
-import slide1bg from 'images/slide_bg_1.jpg'
-import slide2bg from 'images/slide_bg_2.jpg'
-import slide3bg from 'images/slide_bg_3.jpg'
+import {
+  slideOne,
+  slideTwo,
+  slideThree } from 'images';
 
 const cx = classNames.bind(styles);
 
@@ -27,15 +28,15 @@ class Header extends Component {
     };
 
     var slide1style = {
-      'backgroundImage' : 'url(' + slide1bg + ')'
+      'backgroundImage' : 'url(' + slideOne + ')'
     }
 
     var slide2style = {
-      'backgroundImage' : 'url(' + slide2bg + ')'
+      'backgroundImage' : 'url(' + slideTwo + ')'
     }
 
     var slide3style = {
-      'backgroundImage' : 'url(' + slide3bg + ')'
+      'backgroundImage' : 'url(' + slideThree + ')'
     }
 
                   // <p><a href="#" className={cx("btn btn-primary btn-lg")}>Get started</a></p>

@@ -1,17 +1,8 @@
 #aian-features {
-  padding: 3em 0;
+  padding: 3em 0 7em 0;
   clear: both;
   position: relative;
   background: #27292c;
-
-  // padding-top: 734px;
-  // background: -moz-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
-  // background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(0,90,143,1)), color-stop(100%, rgba(255,97,179,1)));
-  // background: -webkit-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
-  // background: -o-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
-  // background: -ms-linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
-  // background: linear-gradient(45deg, rgba(0,90,143,1) 0%, rgba(255,97,179,1) 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005a8f', endColorstr='#ff61b3', GradientType=1 );
 
   @media screen and (max-width: $screen-sm) {
     padding: 3em 0;

@@ -19,6 +19,24 @@ import configureStore from 'store/configureStore';
 import preRenderMiddleware from 'middlewares/preRenderMiddleware';
 import header from 'components/Meta';
 
+const analytics =
+  `<script>
+    (function(window, document) {
+      var fn = 'aian';
+      window[fn] = window[fn] || function() {
+        (window[fn].p = window[fn].p || []).push(arguments);
+      }
+      window[fn].v = 1 * new Date();
+      a = document.createElement('script');
+      m = document.getElementsByTagName('script')[0];
+      a.async = 1;
+      a.src = 'http://aianash.com/api/analytics/aianash.js';
+      m.parentNode.insertBefore(a, m);
+    })(window, document);
+    aian('token', '1892238');
+    aian('track', 'all');
+    </script>`;
+
 /*
  * Export render function to be used in server/index.js
  * We grab the state passed in from the server and the req object from Express/Koa
@@ -81,6 +99,7 @@ export default function render(req, res) {
               <div id="app">${componentHTML}</div>
               <script>window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};</script>
               <script type="text/javascript" charset="utf-8" src="/assets/app.js"></script>
+              ${analytics}
             </body>
           </html>
         `);

@@ -1,12 +1,14 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
+import Scroll from 'react-scroll';
 
+const Element = Scroll.Element;
 const cx = classNames.bind(styles);
 
 const Newsletter = () => {
   return (
-    <div id="aian-subscribe">
+    <Element name="subscribe" id="aian-subscribe">
       <div className={cx("container")}>
         <div className={cx("row", "text-center", "")}>
           <div className={cx("col-md-12")}>
@@ -29,7 +31,7 @@ const Newsletter = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   )
 }
 

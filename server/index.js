@@ -9,7 +9,9 @@ import axios from 'axios';
 import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
 
-var ENV = process.env.NODE_ENV || 'development';
+const ENV = process.env.NODE_ENV || 'development';
+const PORT = (process.env.PORT || 3000);
+const HOST = (process.env.HOST || "localhost");
 
 const AppServer = require('../public/assets/server');
 
@@ -17,7 +19,6 @@ const pretty = new PrettyError();
 const app = Express();
 const server = new http.Server(app);
 
-app.set('port', (process.env.PORT || 3000));
 
 if(ENV === 'production') {
   app.use(compression());
@@ -38,17 +39,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
 
-app.use(Express.static(path.join(__dirname, '..', 'public')));
+if(ENV === 'production') {
+  app.use(Express.static(path.join(__dirname, '..', 'public'), { maxAge: '30 days'}));
+} else {
+  app.use(Express.static(path.join(__dirname, '..', 'public')));
+}
 
 app.get('*', AppServer.default);
 
-if(app.get('port')) {
-  server.listen(app.get('port'), (err) => {
-    if(err) {
-      console.error(err);
-    }
-    console.info('==> 💻  Open http://localhost:3000 in a browser to view the app.');
-  });
-} else {
-  console.error('==>     ERROR: No PORT environment variable has been specified');
-}
+server.listen(PORT, HOST, (err) => {
+  if(err) {
+    console.error(err);
+    return;
+  }
+  console.info('==> 💻  Open in a browser to view the app.');
+});
