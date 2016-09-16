@@ -40,6 +40,10 @@
     font-weight: 300;
     width: 100%;
 
+    &.error {
+      border-color: rgba(#e74c3c, 0.4);
+    }
+
     &:active, &:focus {
       outline: none;
       box-shadow: none;
@@ -63,6 +67,18 @@
     }
 
     @include transition(.5s);
+
+    &:-webkit-autofill {
+      color: $brand-white !important;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+      -webkit-transition-delay: 9999s;
+    }
   }
 
   .btn {

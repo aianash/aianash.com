@@ -47,7 +47,7 @@ class Header extends Component {
             <div className={cx("container")}>
               <div className={cx("col-md-8", "js-fullheight", "slider-text")}>
                 <div className={cx("slider-text-inner")}>
-                  <h2><span>An Arificial Intelligence</span><br/> that understands how users acquire information <br/>on website.</h2>
+                  <h2><span>An Artificial Intelligence</span><br/> that understands how users <br/> acquire information on a website</h2>
                 </div>
               </div>
             </div>
@@ -57,7 +57,7 @@ class Header extends Component {
             <div className={cx("container")}>
               <div className={cx("col-md-8", "js-fullheight", "col-md-offset-4", "right", "slider-text")}>
                 <div className={cx("slider-text-inner")}>
-                  <h2><span>Analyze how information</span><br/> affects user's actions.</h2>
+                  <h2><span>Analyze how information</span><br/> affects user actions</h2>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@ class Header extends Component {
             <div className={cx("container")}>
               <div className={cx("col-md-8", "js-fullheight", "slider-text")}>
                 <div className={cx("slider-text-inner")}>
-                  <h2><span>A Deeper Analytics</span><br/>that tells user's story.</h2>
+                  <h2><span>A Deeper Analytics</span><br/>that tells user story</h2>
                 </div>
               </div>
             </div>

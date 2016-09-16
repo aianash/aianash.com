@@ -25,7 +25,7 @@ const Upcoming = () => {
           <div className={cx("col-md-4")}>
             <h2>Marketing</h2>
             <ul className={cx("list-unstyled")}>
-              <li>Run your marketing campaign based on how information affect a user segment.</li>
+              <li>Run your marketing campaign based on how information affects a user segment.</li>
             </ul>
           </div>
           <div className={cx("col-md-4")}>
