@@ -27,7 +27,6 @@ export default class Newsletter extends Component {
 
   onSubscribe(event) {
     const email = this.refs.email.value
-    console.log(email)
     if(emailValidation.test(email))
       axios.post('/api/subscribe', {email})
     else
