@@ -18,7 +18,8 @@ export default class Newsletter extends Component {
   }
 
   state = {
-    notValid: false
+    notValid: false,
+    subscribed: false
   }
 
   onEmailEnter(event) {
@@ -27,15 +28,18 @@ export default class Newsletter extends Component {
 
   onSubscribe(event) {
     const email = this.refs.email.value
-    if(emailValidation.test(email))
+    if(emailValidation.test(email)) {
+      this.setState({subscribed: true})
       axios.post('/api/subscribe', {email})
-    else
+           .then((resp) => this.setState({subscribed: true}))
+           .catch((err) => this.setState({subscribed: false}))
+    } else
       this.setState({notValid: true})
     event.preventDefault()
   }
 
   render() {
-    const {notValid} = this.state
+    const {notValid, subscribed} = this.state
     return (
       <Element name="subscribe" id="aian-subscribe">
         <div className={cx("container")}>
@@ -54,7 +58,7 @@ export default class Newsletter extends Component {
                   </div>
                 </div>
                 <div className={cx("col-md-4", "col-sm-4")}>
-                  <button type="submit" className={cx("btn", "btn-default", "btn-block")} onClick={this.onSubscribe}>Subscribe</button>
+                  <button type="submit" className={cx("btn", "btn-default", "btn-block", {disabled: subscribed})} onClick={this.onSubscribe}>Subscribe</button>
                 </div>
               </form>
             </div>
