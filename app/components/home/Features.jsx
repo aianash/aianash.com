@@ -18,7 +18,7 @@ const FeatureOne = () => (
     <div className={cx("col-md-4", "animate-box")}>
       <div className={cx("desc")}>
         <h3><Logo/>behavior</h3>
-        <p><span> Analyze</span> informations acquired by users. <span>Understand</span> how information influenced actions. <span>Compare</span> different behavior clusters of users. <span>Visualize</span> navigation patterns for a user behavior. <span>Correlate</span> behavior with user segments.</p>
+        <p>&nbsp;<span> Analyze</span> information acquired by users. <span>Understand</span> how information influenced actions. <span>Compare</span> different clusters of user behavior. <span>Visualize</span> navigation patterns for a user behavior. <span>Correlate</span> behavior with user segments.</p>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@ const FeatureTwo = () => (
     <div className={cx("col-md-4", "animate-box")}>
       <div className={cx("desc")}>
         <h3><Logo/>Predict</h3>
-        <p><span> Predict</span> behavior of user on customized webpage. <span>Compare</span> predictions for different user segments. <span>Visualize</span> prediction for different referral page.</p>
+        <p><span> Predict</span> user behavior on different webpages. <span>Compare</span> predictions for different user segments. <span>Visualize</span> prediction for different referral page.</p>
       </div>
     </div>
   </div>

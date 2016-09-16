@@ -46,7 +46,7 @@ const Team = () => {
             <img src={neeraj} alt="" className={cx("img-responsive")}/>
             <h3>Neeraj Gangwar</h3>
             <h4>Co-Founder</h4>
-            <p>Software Developer. Finds CSS pretty tough and Akka awesome. Trying to make machines learn. IIT Roorkee. Ex-Commonfloor.</p>
+            <p>Software Developer. Finds CSS tough and Akka awesome. Trying to make machines learn. IIT Roorkee. Ex-Commonfloor.</p>
             <ul className={cx("social")}>
               <li><a href="https://about.me/neeraj.gangwar">about.me/neeraj.gangwar</a></li>
               <li><a href="https://in.linkedin.com/in/gangwarneeraj"><i className={cx("icon-linkedin")}></i></a></li>

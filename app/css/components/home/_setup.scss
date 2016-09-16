@@ -2,6 +2,8 @@
   position: relative;
   background: #27292c;
   padding: 3em 0 7em 0;
+  float: left;
+  width: 100%;
 
   .steps-full {
     @include flex();
