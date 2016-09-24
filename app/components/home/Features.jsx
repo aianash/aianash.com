@@ -5,20 +5,26 @@ import styles from 'css/main';
 import Logo from 'components/Logo';
 import Scroll from 'react-scroll';
 
-import {dbehavior, dpredict, dabtest} from 'images';
+import {f1w, f2w, f1, d2, d3} from 'images';
 
 const Element = Scroll.Element;
 const cx = classNames.bind(styles);
 
+var d1style = {
+  'backgroundImage' : 'url(' + f1 + ')'
+}
+
 const FeatureOne = () => (
   <div className={cx("feature", "aianash")}>
-    <div className={cx("col-md-8", "col-md-pull-1", "animate-box")} >
-      <img className={cx("img-responsive")} src={dbehavior} alt="work"/>
-    </div>
-    <div className={cx("col-md-4", "animate-box")}>
-      <div className={cx("desc")}>
+    <img className={cx("col-md-6", 'col-md-offset-1', 'image-responsive')} src={f1w}/>
+    <div className={cx("col-md-3", "animate-box")}>
+      <div className={cx("desc", 'left')}>
         <h3><Logo/>behavior</h3>
-        <p>&nbsp;<span> Analyze</span> information acquired by users. <span>Understand</span> how information influenced actions. <span>Compare</span> different clusters of user behavior. <span>Visualize</span> navigation patterns for a user behavior. <span>Correlate</span> behavior with user segments.</p>
+        <ul className={cx('list-unstyled')}>
+          <li>Why write complex queries to segment users and find common interests? When our machine learning algorithms can find it for you.</li>
+          <li>Don't just believe in crude metrics. But gain insights into reasons behind user actions.</li>
+          <li>Identify untapped user interests to customise your product or marketing efforts.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -26,36 +32,23 @@ const FeatureOne = () => (
 
 const FeatureTwo = () => (
   <div className={cx("feature", "aianash")}>
-    <div className={cx("col-md-8", "col-md-pull-1", "animate-box")}>
-      <img className={cx("img-responsive")} src={dpredict} alt="work"/>
-    </div>
-    <div className={cx("col-md-4", "animate-box")}>
+    <div className={cx("col-md-3", 'col-md-offset-2', "animate-box")}>
       <div className={cx("desc")}>
-        <h3><Logo/>Predict</h3>
-        <p><span> Predict</span> user behavior on different webpages. <span>Compare</span> predictions for different user segments. <span>Visualize</span> prediction for different referral page.</p>
+        <h3><Logo/>timeline</h3>
+        <ul className={cx('list-unstyled')}>
+          <li>Understand when and where you are losing customers.</li>
+          <li>Visualise how user interests evolve throughout the website.</li>
+        </ul>
       </div>
     </div>
-  </div>
-)
-
-const FeatureThree = () => (
-  <div className={cx("feature", "aianash")}>
-    <div className={cx("col-md-8", "col-md-pull-1", "animate-box")}>
-      <img className={cx("img-responsive")} src={dabtest} alt="work"/>
-    </div>
-    <div className={cx("col-md-4", "animate-box")}>
-      <div className={cx("desc")}>
-        <h3><Logo/>A/B Test</h3>
-        <p><span> A/B Test</span> user behavior with multiple design. <span>Analyze</span> predictions for different tests.</p>
-      </div>
-    </div>
+    <img className={cx("col-md-", 'image-responsive')} src={f2w}/>
   </div>
 )
 
 const Features = () => {
   return (
     <Element name="features" id="aian-features" className={cx('aian-features')}>
-      <div className={cx("container")}>
+      <div className={cx("")}>
         <div className={cx("row", "hd-row")}>
           <div className={cx("col-md-8", "col-md-offset-2", "text-center")}>
             <a href="#features" className={cx("box-heading")}>Dashboard</a>
@@ -64,7 +57,6 @@ const Features = () => {
         <div className={cx("row")}>
           <FeatureOne/>
           <FeatureTwo/>
-          <FeatureThree/>
         </div>
       </div>
     </Element>

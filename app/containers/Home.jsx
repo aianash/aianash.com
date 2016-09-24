@@ -24,7 +24,6 @@ class Home extends Component {
       <div id="page">
         <Navigation/>
         <Header/>
-        <CustomerSegment/>
         <Answers/>
         <HowItWorks/>
         <Features/>
@@ -37,5 +36,6 @@ class Home extends Component {
     )
   }
 }
+        // <CustomerSegment/>
 
 export default Home;

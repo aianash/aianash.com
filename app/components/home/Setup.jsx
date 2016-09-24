@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
-import { tags, dbehavior, embed } from 'images';
+import { tags, f1w, embed } from 'images';
 
 const cx = classNames.bind(styles);
 
@@ -76,7 +76,7 @@ const StepThree = ({step}) => (
     <div className={cx("row")}>
       <div className={cx("col-md-7", "col-sm-7", "col-md-pull-2", "col-sm-pull-2", "animate-box")}>
         <div className={cx("steps-image")}>
-          <img src={dbehavior} alt="work"/>
+          <img src={f1w} alt="work"/>
         </div>
       </div>
       <div className={cx("col-md-5 col-sm-5")}>

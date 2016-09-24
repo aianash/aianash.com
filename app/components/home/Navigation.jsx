@@ -19,10 +19,10 @@ const Navigation = () => {
           </div>
           <div className={cx("col-xs-10", "text-right", "menu-1")}>
             <ul>
-              <li><Link activeClass={cx("active")} to="team" smooth={true} duration={500}>Team</Link></li>
               <li><Link activeClass={cx("active")} to="features" smooth={true} duration={500}>Features</Link></li>
               <li><Link activeClass={cx("active")} to="hiw" smooth={true} duration={500}>How It Works</Link></li>
               <li><Link activeClass={cx("active")} to="subscribe" smooth={true} duration={500}>Get Started</Link></li>
+              <li><Link activeClass={cx("active")} to="team" smooth={true} duration={500}>Team</Link></li>
             </ul>
           </div>
         </div>
